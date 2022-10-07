@@ -1,0 +1,187 @@
+
+#header{
+	border-bottom:2px solid #0099ff;
+}
+
+ul{
+	list-style: none;
+	text-align:right;
+
+}
+
+#logout_btn{
+	position: absolute;
+	display:none;
+	right:0;
+	position:absolute;
+	color:#666666;
+	background-color:white;
+
+	border-bottom :2px solid black;
+	width:150px;
+	height:40px;
+	margin-top: 2px;
+}
+
+.dropbtn{
+	border:none;
+	border-radius: 5%;
+	background-color:white;
+	color:#666666;
+	font-family: "Lucida Console";
+	font-weight: bold;
+	font-size: 120%;
+}
+
+.dropbtn img
+{
+	margin-top: 2px;
+	margin-right: 5px;
+	margin-left:3px;
+	width:40px;
+	padding: 0px;
+	border-radius: 50%;
+	vertical-align: middle;
+}
+
+.dropbtn:hover{
+	background-color: #0099ff;
+	color:white; 
+	cursor: pointer;
+}
+
+
+#left_container{
+
+	width:47%;
+	/*border:1px solid purple;*/
+	text-align:center;
+	float:left;
+	/*position: absolute;*/
+
+}
+
+
+#quantity_table{
+
+	border-collapse:separate;
+	border:2px solid #ddd;
+	border-radius: 5%;
+	margin-top:10px;
+	margin-left:auto;
+	margin-right: auto; 
+	padding:12px;
+
+}
+
+#quantity_table td{
+	/*border:1px solid black;*/
+	text-align:center;
+	/*margin:20px;*/
+	padding:5px 10px;
+
+}
+
+#quantity_table th{
+	text-align:center;
+	/*margin:20px;*/
+}
+
+
+input[type="button"]{
+	background-color: green;
+	border-radius: 50%;
+	box-shadow: 0px 0;
+	/*border:1px solid red;*/
+	padding:0px;
+	border:none;
+}
+
+input[type="button"]:hover{
+	background-color: black;
+}
+
+input{
+	text-align:center;
+	width:85px;
+}
+
+
+button[data-type="minus"]{
+	color:white;
+	background-color: red;
+}
+
+button[data-type="plus"]{
+	color:white;
+	background-color: green;
+}
+
+
+.save_changes{
+	margin-top:10px;
+}
+
+#right_container{
+	/*border:2px solid red;*/
+	width:49%;
+	float:right;
+	text-align:center;
+
+}
+
+
+
+#order_table{
+	margin-left: auto;
+	margin-right:auto; 
+	border-collapse:separate;
+	border:2px solid #ddd;
+	border-radius: 5%;
+	margin-top:10px;
+	margin-bottom:20px;
+	display:none;
+
+}
+
+#order_table td{
+	text-align:center;
+	padding:5px 12px;
+}
+
+#order_table th{
+	text-align:center;
+	padding:5px 12px;
+
+}
+
+/*#order{
+	display: none;
+}*/
+#order{
+
+	display: none;
+	text-align: -moz-center;
+}
+
+#rwd-table {
+	display: none;
+	margin-left: auto;
+	margin-right: auto;
+	width:50%;
+	text-align:center;
+	border:2px solid #ddd;
+}
+
+#rwd-table th{
+	padding:5px 12px;
+}
+
+#eee{
+	/*border:2px solid black;*/
+	width:100%;
+}
+
+
+
+

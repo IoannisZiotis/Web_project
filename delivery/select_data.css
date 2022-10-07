@@ -1,0 +1,5 @@
+<?php
+session_start();
+    $selectdata = "SELECT Deliver FROM orders WHERE Deliver='".$_SESSION['currentuser']."'";
+	$result = mysqli_query($conn,$selectdata);
+?>

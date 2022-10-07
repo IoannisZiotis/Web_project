@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #0a6699;
+  color: white;
+}
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+h3,
+h2 {
+  color: rgb(255, 0, 0);
+  margin: 0;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  display:none;
+  width: 100%;
+
+  justify-content: center;
+  align-items: center;
+  align-items: stretch; 
+}
+.item {
+  width: 100%;
+  text-align: center;
+}
+
+
+.rwd-table {
+  margin: 1em 0;
+}
+tr {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+th {
+  color: #dd5;
+}
+th,
+td {
+   text-align: left; 
+  padding: 10px;
+}
+.ord-table {
+  th,
+  td {
+    background: #34495e;
+    color: #fff;
+  }
+}
+@import 'https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700';
+
+.rwd-table {
+  background: #34495e;
+  color: #fff;
+  width: 100%;
+  overflow: hidden;
+  tr {
+    border-color: lighten(#34495e, 10%);
+    color: #dd5;
+  }
+
+  th,
+  td {
+    margin: 0.5em 1em;
+    color: green;
+    padding: 10px;
+  }
+}
+
+input[type="button"] {
+  padding: 13px;
+  margin-top: 10px;
+  width: 100%;
+  margin:0 auto;
+  text-decoration: none;
+  font-family: Arial;
+  background: #859c81;
+  background-image: -webkit-linear-gradient(top, #859c81);
+  background-image: -moz-linear-gradient(top, #859c81);
+  background-image: -ms-linear-gradient(top, #859c81);
+  background-image: -o-linear-gradient(top, #859c81);
+  background-image: linear-gradient(to bottom, #859c81);
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  color: #000000;
+  font-size: 20px;
+  border: 0px;
+  text-align:center;
+}
+
+p{
+  font-size: 250%;
+  text-align: center;
+
+}
+
+#un{
+  padding:20px;
+  background-color:rgb(28, 161, 28);
+  border:none;
+  color:white;
+  font-size: 90%;
+  margin:0 auto;
+}

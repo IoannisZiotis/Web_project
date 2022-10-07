@@ -1,0 +1,238 @@
+#avail{
+	margin:0 auto;
+	width:200px;
+  height:100px;
+  color:black;
+  cursor:pointer;
+  font-size:150%;
+	background-color:#337ab7;
+	text-align:center;
+	margin-top:30px;
+}
+body{
+  text-align: center;
+  background-color: rgb(156, 150, 150);
+}
+#info{
+  margin:0 auto;
+  color:black;
+  width:200px;
+  font-size:150%;
+  height:100px;
+  cursor:pointer;
+  background-color:#337ab7;
+  text-align:center;
+  margin-top:50px;
+}
+#logout{
+  color:black;
+  margin:0 auto;
+  font-size:150%;
+  width:200px;
+  height:100px;
+  cursor:pointer;
+  background-color:#337ab7;
+  text-align:center;
+  margin-top:50px;
+}
+#avail:hover{
+	background-color:#999ab4;
+}
+#info:hover{
+  background-color:#999ab4;
+}
+#logout:hover{
+  background-color:#999ab4;
+}
+#pop{
+	margin:0 auto;
+	width:200px;
+	height:200px;
+}
+.popupBoxWrapper{
+	width: 40%; margin: 50px auto; text-align: left;
+	overflow: auto;
+}
+#popupBoxContent{
+	background-color: #FFF; 
+	text-align:center;
+	border-radius: 4px;
+	height:100%;
+	overflow: auto;
+  padding-bottom: 100px;
+}
+
+#infowindow-content .title {
+        font-weight: bold;
+      }
+
+      #infowindow-content {
+        display: none;
+      }
+
+
+
+.popupBox{
+	top: 0; left: 0; position: fixed; width: 100%; height: 100%;
+	background-color: rgba(0,0,0,0.7); display: none;
+	border:1px solid black;
+	z-index: 1; 
+  overflow: auto;
+}
+
+.infopopupBox{
+  top: 0; left: 0; position: fixed; width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.7); display: none;
+  border:1px solid black;
+  z-index: 1; 
+  overflow: auto;
+  text-align:center;
+  border-radius: 4px;
+}
+
+.infopopupBoxWrapper{
+  width: 60%; margin: 50px auto; text-align: left;
+  overflow: auto;
+  background-color: white;
+  border-radius: 4px;
+}
+#infopopupBoxContent{
+  background-color: #FFF; 
+  text-align:center;
+  border-radius: 4px;
+  height:100%;
+  overflow: auto;
+  padding-bottom: 100px;
+  color:black;
+}
+
+#address{
+	border:1px solid black;
+	width:100%;
+	height:100%;
+	padding-bottom:40px;
+	padding-top:20px;
+}
+
+ #map {
+    height: 300px;
+    width: 300px;
+	margin:0 auto;
+	border-radius: 4px;
+}
+
+input[type="text"]{
+	width:60%;
+	margin-top:10px;
+	height:19px;
+	margin-right:5px;
+	box-shadow: inset 0 1px rgba(255,255,255,.6);
+	border: 2px solid #ec9a10;
+	border-radius: 2px;
+}
+input[type="submit"]{
+	width:30%;
+	border-radius: 2px;
+	margin-top: 10px;
+	background: #ffc600;
+    background-image: none;
+	background-image: linear-gradient(to top,#faa21b,#ffc600);
+	border: 1px solid #ec9a10;
+	height:23px;
+	cursor: pointer;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+	width:34px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .popupBoxWrapper{ 
+        width: 100%;
+		margin: 0 auto; 
+    }
+}
+
+#description {
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 300;
+      }
+
+      #infowindow-content .title {
+        font-weight: bold;
+      }
+
+      #infowindow-content {
+        display: none;
+      }
+
+      #map #infowindow-content {
+        display: inline;
+      }
+
+      .pac-card {
+        margin: 10px 10px 0 0;
+        border-radius: 2px 0 0 2px;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        outline: none;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+        background-color: #fff;
+        font-family: Roboto;
+      }
+
+      #pac-container {
+        padding-bottom: 12px;
+        margin-right: 12px;
+      }
+
+      .pac-controls {
+        display: inline-block;
+        padding: 5px 11px;
+      }
+
+      .pac-controls label {
+        font-family: Roboto;
+        font-size: 13px;
+        font-weight: 300;
+      }
+
+      #pac-input {
+        background-color: #fff;
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 300;
+        margin-left: 12px;
+        padding: 0 11px 0 13px;
+        text-overflow: ellipsis;
+        width: 300px;
+      }
+
+      #pac-input:focus {
+        border-color: #4d90fe;
+      }
+
+      #title {
+        color: #fff;
+        background-color: #4d90fe;
+        font-size: 25px;
+        font-weight: 500;
+        padding: 6px 12px;
+      }
+      #target {
+        width: 345px;
+      }
+

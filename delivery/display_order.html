@@ -1,0 +1,139 @@
+<html>
+	<head>
+		<title>Orders</title>
+		<link rel="stylesheet" type="text/css" href="orders.css" />
+		<meta charset=utf-8>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+			
+        	var name = '<?php echo $_SESSION['currentuser']; ?>' ;
+			function select_data(){
+				$.ajax({
+					  type: 'post',
+					  url: 'select_data.php',
+					  data: {
+					   user_name:name,
+					  },
+					  success: function (response) {
+					   console.log(response);
+					   alert('updated');
+					   location.reload(); 
+					  }
+					  });
+			}
+        	$(document).ready(function(){
+			    $("button").click(function(){
+			        $.ajax({
+					  type: 'post',
+					  url: 'delivered.php',
+					  data: {
+					   user_name:name,
+					  },
+					  success: function (response) {
+					   console.log(response);
+					   alert('updated');
+					   location.reload(); 
+					  }
+					  });
+			    });
+			});
+        	
+        	$.ajax({
+			  type: 'post',
+			  url: 'load_order.php',
+			  data: {
+			   user_name:name,
+			  },
+			  success: function (response) {
+			   // We get the element having id of display_info and put the response inside it
+			   $( '#order' ).html(response);
+			  }
+			  });
+        </script>
+
+	</head>
+	<body>
+		<div class="container">
+			<div class="item"  id="address">
+				<h2>Order</h2>
+			</div>
+			<div class="item" id="map_cont">
+				
+			</div>
+			<div class="item" id="destination">
+				
+			</div>
+			<div class="item" id="order"  >
+				
+			</div>		
+		</div>
+		
+		<script>
+			  var name = '<?php echo $_SESSION['currentuser']; ?>' ;
+			  var latlng;
+			  $.ajax({
+				  type: 'post',
+				  url: 'get_shop.php',
+				  Datatype:"json",
+				  data: {
+				   user_name:name,
+				  },
+				  success: function (response) 
+				  {
+				  	//console.log(JSON.parse(response));
+				  	//var x=JSON.parse(response)
+				  	
+				  	$('#address').append(response);
+				  }
+		      });
+
+
+			  $.ajax({
+				  type: 'post',
+				  url: 'get_cust.php',
+				  Datatype:"json",
+				  data: {
+				   user_name:name,
+				  },
+				  success: function (response) 
+				  {
+				  	$('#destination').html(response);
+				  }
+		      });
+
+
+			  $.ajax({
+			  type: 'post',
+			  url: 'get_address.php',
+			  async:false,
+			  data: {
+			   user_name:name,
+			  },
+			  success: function (response) 
+			  {
+			  	latlng=response;
+			  }
+		      });
+			  var point =latlng.split(" ");
+		       function initMap() 
+			  	{
+			        var uluru = {lat: parseFloat(point[0]), lng: parseFloat(point[1])};
+			        var map = new google.maps.Map(document.getElementById('map_cont'), {
+			          zoom: 15,
+			          center: uluru
+			        });
+			        var marker = new google.maps.Marker({
+			          position: uluru,
+			          map: map
+			        });
+			  	}
+
+		     
+	    </script>
+
+		<script async defer
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKeLIlgJ6RmiJ0nTi0kZb4Oixc5MN9MpQ&libraries=places&callback=initMap">
+		</script>
+	</body>
+</html>

@@ -1,0 +1,99 @@
+
+<html>
+	<head>
+	<title>Administrator login</title>
+	<!-- Meta tag Keywords -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+
+	<!-- <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+	 function hideURLbar(){ window.scrollTo(0,1); }
+	 </script>-->
+	 <script> 
+	 	$(document).ready(function(){
+	 		$('#submit').click(function(){
+	 			$('#response').empty();
+	                var isempty =0;
+	                var inputs = document.getElementsByTagName('input');
+	 			for(var i = 0; i < inputs.length; i++) {
+	                    if(inputs[i].value == '') {
+	                        inputs[i].placeholder='Fill out this field';
+	                        isempty = 1;
+	                    }
+	                }
+	                if(isempty==0)
+	                {
+	 		var username  = $('#kati').val();
+	 		var password = $('#kati2').val();
+
+	 		editData="username="+username+"&password="+password;
+			$.ajax({
+				type:"Post",
+				url:"php/login.php",
+				// dataType: 'json',
+				data:editData,
+				success:function(result){
+					var data = $.parseJSON(result);
+					if (data.status==1)
+					{
+
+						location.href =  'php/manager_view.php';
+				    }
+				    else
+				    {
+				    	$('#response').append(data.message);
+				    }
+
+				}
+			});
+		}
+	 		});
+	 		
+
+
+	 	});
+	 	
+	</script>
+	<!-- Meta tag Keywords -->
+	<!-- css files -->
+	<link rel="stylesheet" href="font-awesome.css"> <!-- Font-Awesome-Icons-CSS -->
+	<link rel="stylesheet" href="css/login.css" type="text/css" media="all" /> <!-- Style-CSS --> 
+	<!-- //css files -->
+	<!-- web-fonts -->
+	<link href="//fonts.googleapis.com/css?family=Raleway:400,500,600,700,800" rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet"/>
+	<!-- //web-fonts -->
+	</head>
+	<body>
+			<!--main-->
+			<div class="header"></div>
+			<div class="main-content-agile">
+				<div class="sub-main-w3">	
+					<h2>Σύνδεση</h2>
+					<!-- <form  method="post" > -->
+						<div class="form">
+				
+						<div style="color:white;" id="response"></div>
+						<div class="icon1">
+							<input id="kati" placeholder="Όνομα" name="username" type="text" required="" >
+						</div>
+						
+						<div class="icon2">
+							<input  placeholder="Κωδικός" name="password" type="password" required="True" id='kati2'>
+						</div>
+						<label class="anim">
+						</label> 
+							<div class="clear"></div>
+						<input type="submit" value="Είσοδος" id='submit'>
+				</div>
+					<!-- </form> -->
+				</div>
+			</div>
+			<!--//main-->
+
+	<!-- js -->
+	<!-- <script src="js/jquery.vide.min.js"></script> -->
+	<!-- //js -->
+	</body>
+</html>

@@ -1,0 +1,273 @@
+body{
+  margin:0;
+}
+
+#header{
+	height:60px;
+	text-align: right;
+	border-bottom:4px solid #ffbb00f3;
+
+	background-color: #624229;
+}
+
+.dropbtn{
+	color:white;
+	background-color:#624229;
+	border:none;
+	float:left;
+	text-align:left;
+	margin:10px;
+	height:80%;
+	font-size:110%;
+
+
+}
+#del_mess{
+  display:none;
+}
+.dropbtn:hover, .dropbtn:focus {
+	cursor: pointer;
+
+}
+
+.dropdown-content {
+  right:0;
+  position:absolute;
+  display:none;
+  padding-right:0.1%;
+}
+
+ .dropbtn:focus {
+  /*background-color:red ;*/
+  cursor: pointer;
+
+}
+
+#exit_btn{
+	display:none;
+	margin-left:-185px;
+	font-size:110%;
+	color:white;
+	background-color:#624229;
+	border:none;
+	width:160px;
+	padding:10px;
+	
+
+}
+
+#exit_btn:hover{
+	cursor:pointer;
+}
+
+
+#message{
+display: none;
+color:#624229;
+font-family: "Vollkorn";
+font-size: large;
+margin-bottom: 1%;
+}
+
+#sss{
+  color:red;
+  margin:2%;
+}
+
+
+
+#phone{
+  /*border:2px solid red;*/
+  width:20%;
+  text-align:center;
+  display:inline;
+  float:left;
+}
+#phone h4{
+  padding:0px;
+  margin-bottom:10px;
+}
+
+#phone input[type="tel"]{
+  width:60%;
+ margin-top:10px;
+  height:19px;
+  margin-right:5px;
+  box-shadow: inset 0 1px rgba(255,255,255,.6);
+  border: 2px solid #ec9a10;
+  border-radius: 2px;
+}
+
+#wrapper{
+  position: relative;
+  width:100%;
+  display: block;
+  text-align:center;
+
+}
+
+#summ{
+  overflow: auto;
+  display:inline-block;
+  
+  float:right;
+  height: 100%;
+  width:35%;
+  text-align:center;
+  margin-top: 1%;
+  border-radius:2%;
+  margin-right:5%;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+padding: 10px;
+}
+
+.summ_content{
+  border-bottom:2px solid gray;
+  text-align:left;
+  font-size:18px;
+}
+
+
+#f_order{
+  text-align: center;
+}
+
+th{
+  text-align: center;
+}
+td{
+  text-align: center;
+}
+#fin{
+  text-align:center;
+  padding-top:20px;
+  margin-bottom:2%;
+}
+#fin_btn{
+  font-family: "Vollkorn";
+  font-size:17px;
+  color:white;
+  font-weight:bold;
+  /*color:red;*/
+  /*margin:auto;*/
+  padding:10px;
+  background: #ffc600;
+  background-image: none;
+  background-image: linear-gradient(to top,#faa21b,#ffc600);
+  border: 1px solid #ec9a10;
+  border-radius:5px;
+  cursor:not-allowed;
+}
+
+
+
+#popupBoxContent{
+  /*text-align:left;*/
+  margin-top:1%;
+  float:left;
+  background-color: #FFF;
+  text-align:center;
+  border-radius: 4px;
+  margin-left:5%;
+  overflow: hidden;
+  width:35%;
+  padding-bottom: 100px;
+  position:absolute;
+  /*display:inline-block;*/
+  text-align:center;
+  /*border:3px solid black;*/
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+padding-left: 20px;
+padding-right: 20px;
+}
+
+
+#conf_btn{
+  color:black;
+  background-color:#ffc600;
+  margin-top:1%;
+  width:20%;
+  border-radius: 2px;
+  border:none;
+  padding:0.5%;
+  font-weight: bold;
+}
+
+#conf_btn:hover{
+  cursor: pointer;
+
+}
+
+#address{
+  border:1px solid black;
+  width:100%;
+  height:100%;
+  padding-bottom:40px;
+  padding-top:20px;
+}
+
+#map {
+  height: 300px;
+  width: 300px;
+  margin:0 auto;
+  border-radius: 4px;
+}
+
+#popupBoxContent input[type="text"]{
+  width:60%;
+  margin-top:10px;
+  height:19px;
+  margin-right:5px;
+  box-shadow: inset 0 1px rgba(255,255,255,.6);
+  border: 2px solid #ec9a10;
+  border-radius: 2px;
+}
+input[type="submit"]{
+  width:30%;
+  border-radius: 2px;
+  margin-top: 10px;
+  background: #ffc600;
+  background-image: none;
+  background-image: linear-gradient(to top,#faa21b,#ffc600);
+  border: 1px solid #ec9a10;
+  height:23px;
+  cursor: pointer;
+  
+  /*display:block;*/
+}
+
+
+
+.close {
+  color: #aaa;
+  float: right;
+  width:34px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 827px) {
+  /* For mobile phones: */
+  #summ{
+    float:none;
+    display:block;
+    width:94%;
+    margin-right:0;
+  }
+  #popupBoxContent{
+    float:none;
+    width:90%;
+    position: relative;
+    margin-left:0;
+  }
+  #map{
+    width:100%;
+  }
+}
