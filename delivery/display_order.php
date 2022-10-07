@@ -136,7 +136,7 @@ session_start();
 	    </script>
 
 		<script async defer
-		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKeLIlgJ6RmiJ0nTi0kZb4Oixc5MN9MpQ&libraries=places&callback=initMap">
+		src="google api key">
 		</script>
 	</body>
 </html>
